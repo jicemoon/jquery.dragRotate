@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+	<script src="jquery.dragRotate.js"></script>
+	<title>无标题文档</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-backface-visibility: hidden;
+		}
+		/*WRAPPER*/
+		.wrapper {
+			position: relative;
+			margin: 20px auto;
+			width: 100%;
+		}
+		.circle {
+			position: relative;
+			margin-top: 30px;
+			margin-bottom: 20px;
+			margin-left: 25px;
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			background: #093b62;
+			box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.3);
+			transition : all 0.5s ease;
+		}
+		/*LITTLE CIRCLES*/
+		.circle li {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background: white;
+			list-style: none;
+			text-align: center;
+			font: 20px/50px Helvetica, Arial, sans-serif;
+		}
+		.circle li:nth-child(1) {
+			top: 15px;
+			left: 125px;
+		}
+		.circle li:nth-child(2) {
+			top: 125px;
+			left: 235px;
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			-o-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
+		.circle li:nth-child(3) {
+			top: 235px;
+			left: 125px;
+			-webkit-transform: rotate(180deg);
+			-moz-transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			-o-transform: rotate(180deg);
+			transform: rotate(180deg);
+		}
+		.circle li:nth-child(4) {
+			top: 125px;
+			left: 15px;
+			-webkit-transform: rotate(270deg);
+			-moz-transform: rotate(270deg);
+			-ms-transform: rotate(270deg);
+			-o-transform: rotate(270deg);
+			transform: rotate(270deg);
+		}
+		/*INNER CIRCLE*/
+		.wrapper:before {
+			content: "DR";
+			text-align: center;
+			font: 70px/135px Georgia, Times, serif;
+			color: #eaeaea;
+			position: absolute;
+			top: 86px;
+			left: 110px;
+			z-index: 10;
+			width: 130px;
+			height: 130px;
+			border-radius: 50%;
+			background: #ffffff;
+			-webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+			box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+		}
+	</style>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="menu">
+		<div class="circle">
+			<ul>
+				<li> 1</li>
+				<li> 2</li>
+				<li> 3</li>
+				<li> 4</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrapper">
+	<div class="menu">
+		<div class="circle">
+			<ul>
+				<li> 1</li>
+				<li> 2</li>
+				<li> 3</li>
+				<li> 4</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script>
+	$(function (){
+		$(".wrapper .menu .circle").dragRotate();
+	});
+</script>
+</body>
+</html>
