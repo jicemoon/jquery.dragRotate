@@ -1,2 +1,2 @@
-# jquery.dragRotate
-ÍÏ×§Ðý×ª
+ï»¿# jquery.dragRotate
+æ‹–æ‹½æ—‹è½¬
